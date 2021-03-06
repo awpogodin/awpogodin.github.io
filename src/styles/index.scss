@@ -1,0 +1,131 @@
+@import "./reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #000;
+
+  &.themed {
+    background-color: #fff;
+  }
+}
+
+.app {
+  min-height: 95vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1400px;
+  padding: 0 20px 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  &__button {
+    margin: 20px;
+    display: block;
+    font-size: calc(26px + (28 - 24) * ((100vw - 480px) / (1280 - 480)));
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    opacity: 60%;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}
+
+.welcome {
+  &__avatar {
+    width: calc(40px + (50 - 40) * ((100vw - 480px) / (1280 - 480)));
+    animation-delay: 1s;
+  }
+
+  &__hello {
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: calc(18px + (24 - 18) * ((100vw - 480px) / (1280 - 480)));
+    font-weight: 600;
+    color: #6e6e6e;
+    animation-delay: 1.5s;
+  }
+
+  &__title {
+    line-height: 1.5;
+    font-size: calc(26px + (44 - 26) * ((100vw - 480px) / (1280 - 480)));
+    font-weight: 600;
+    color: #6e6e6e;
+    animation-delay: 1.8s;
+
+    &_sub {
+      color: #fff;
+
+      &.themed {
+        color: #000;
+      }
+    }
+  }
+}
+
+.description {
+  margin-top: calc(50px + (100 - 50) * ((100vw - 480px) / (1280 - 480)));
+
+  &__text {
+    display: block;
+    line-height: 1.5;
+    font-size: calc(18px + (30 - 18) * ((100vw - 480px) / (1280 - 480)));
+    font-weight: 600;
+    color: #fff;
+    animation-delay: 2.5s;
+
+    &.themed {
+      color: #000;
+    }
+
+    &_sub {
+      color: #6e6e6e;
+    }
+  }
+
+  &__links {
+    margin-top: 24px;
+    display: block;
+    line-height: 1.5;
+    font-size: calc(16px + (18 - 16) * ((100vw - 480px) / (1280 - 480)));
+    font-weight: 500;
+    color: #6e6e6e;
+    animation-delay: 2.8s;
+
+    &_link {
+      color: #fff;
+      text-decoration: none;
+      transition-duration: 0.4s;
+
+      &.themed {
+        color: #000;
+      }
+
+      &:hover {
+        color: #6e6e6e;
+      }
+    }
+  }
+}
