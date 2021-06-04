@@ -27,7 +27,7 @@ const init = () => {
     });
     isLightMode = !isLightMode;
     btn.innerHTML = getBtnIcon(isLightMode);
-    localStorage.setItem(THEME_KEY, isLightMode);
+    Storage.setItem(THEME_KEY, isLightMode);
   };
 
   Storage.getBooleanItem(THEME_KEY) && changeTheme(); // dark mode is default
